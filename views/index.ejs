@@ -1,0 +1,48 @@
+<div class="card mb-4">
+  <div style="display: flex;justify-content: center;" class="card-header">
+    <h1 class="display-4">Calculo de Economia</h1>
+  </div>
+  <div class="card-body">
+    <form action="/sistemas" method="POST">
+      <div class="form-group row">
+        <div class="col">
+          <label class="form-label" for="vazao">Vazão</label>
+          <input class="form-control" type="number" name="vazao">
+        </div>
+        <div class="col">
+          <label class="form-label" for="deltat">Delta T</label>
+          <input class="form-control" type="number" name="deltat">
+        </div>
+        <div class="col">
+          <label class="form-label" for="diasPMes">Dias por Mês</label>
+          <input class="form-control" type="number" name="diasPMes">
+        </div>
+        <div class="col">
+          <label class="form-label" for="horasPDia">Horas por Dias</label>
+          <input class="form-control" type="number" name="horasPDia">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col">
+          <label class="form-label" for="custoKWH">custo kWh</label>
+          <input class="form-control" type="number" name="custoKWH">
+        </div>
+        <div class="col">
+          <label class="form-label" for="renovacaoDeAr">Taxa de Renovação de Ar</label>
+          <input class="form-control" type="number" name="renovacaoDeAr">
+        </div>
+        <div class="col">
+          <label class="form-label" for="temperaturaExterna">Temperatura Externa</label>
+          <input class="form-control" type="number" name="temperaturaExterna">
+        </div>
+        <div class="col">
+          <label class="form-label" for="setpoint">setpoint Comforto</label>
+          <input class="form-control" type="number" name="setpoint">
+        </div>
+      </div>
+      <button class="btn btn-success" type="submit">Calcular</button>
+    </form>
+    <hr>
+    <%- include('./resultado')%> 
+  </div>
+</div>

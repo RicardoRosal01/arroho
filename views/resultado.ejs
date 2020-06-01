@@ -1,0 +1,33 @@
+<% if (locals.dados) { %>
+<div class="card">
+    <div class="card-header">
+        Resultado
+    </div>
+    <div class="row card-body">
+        <div class="card-body">
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">Consumo Atual</div>
+                <div class="card-body">
+                    <p class="card-text"><%= dados.energiaAtual %> Joules </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Consumo Projetado</div>
+                <div class="card-body">
+                    <p class="card-text"><%= dados.energiaProjetada %> Joules </p>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Estimativa de Economia</div>
+                <div class="card-body">
+                    <p class="card-text"><%= dados.economia %> % </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% } %>
