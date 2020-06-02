@@ -11,7 +11,7 @@
         </div>
         <div class="col">
           <label class="form-label" for="deltat">Delta T (°C / K)</label>
-          <input class="form-control" type="number" name="deltat">
+          <input class="form-control" type="number" step="0.1" name="deltat">
         </div>
         <div class="col">
           <label class="form-label" for="diasPMes">Dias por Mês</label>
@@ -25,24 +25,24 @@
       <div class="form-group row">
         <div class="col">
           <label class="form-label" for="custoKWH">custo kWh</label>
-          <input class="form-control" type="number" name="custoKWH">
+          <input class="form-control" type="number" step="0.1" name="custoKWH">
         </div>
         <div class="col">
           <label class="form-label" for="renovacaoDeAr">Taxa de Renovação de Ar (%)</label>
-          <input class="form-control" type="number" name="renovacaoDeAr">
+          <input class="form-control" type="number" step="0.1" name="renovacaoDeAr">
         </div>
         <div class="col">
           <label class="form-label" for="temperaturaExterna">Temperatura Externa (°C / K)</label>
-          <input class="form-control" type="number" name="temperaturaExterna">
+          <input class="form-control" type="number" step="0.1" name="temperaturaExterna">
         </div>
         <div class="col">
           <label class="form-label" for="setpoint">setpoint Comforto (°C / K)</label>
-          <input class="form-control" type="number" name="setpoint">
+          <input class="form-control" type="number" step="0.1" name="setpoint">
         </div>
       </div>
       <button class="btn btn-success" type="submit">Calcular</button>
     </form>
     <hr>
-    <%- include('./resultado')%> 
+    <%- include('./resultado') %> 
   </div>
 </div>

@@ -8,13 +8,13 @@ Router.get('/',(req,res)=>{
 Router.post('/',(req,res)=>{
     let horas,dados
     horas = qtdHoras(req.body.diasPMes,req.body.horasPDia)
-    dados = economia(req.body.vazao,horas,req.body.renovacaoDeAr,req.body.temperaturaExterna,req.body.setpoint,req.body.deltat)
+    dados = economia(req.body.vazao,horas,req.body.custoKWH,req.body.renovacaoDeAr,req.body.temperaturaExterna,req.body.setpoint,req.body.deltat)
     res.render('index',{dados:dados})
 })
 
 module.exports = {Router}
 
-const economia = function(vazao,qtdHoras,renovacao,temperaturaExterna,setpoint,deltaT){
+const economia = function(vazao,qtdHoras,custo,renovacao,temperaturaExterna,setpoint,deltaT){
     let energiaAtual,energiaProjetada,economia,deltaTAutomacao,densidade,calorEspecifico,temperaturaRetorno,temperaturaMistura,taxaTR,trAtual,trProjecao
     
     densidade = 997
@@ -32,8 +32,10 @@ const economia = function(vazao,qtdHoras,renovacao,temperaturaExterna,setpoint,d
 
     economiaNF = (energiaAtual - energiaProjetada)/energiaAtual
     economia = economiaNF.toFixed(2)
+    economiaFinanceiraNF = economiaNF * energiaAtual *custo
+    economiaFinanceira = economiaFinanceiraNF.toFixed(2)
 
-    return {energiaAtual,energiaProjetada,trAtual,trProjecao,economia}
+    return {energiaAtual,energiaProjetada,trAtual,trProjecao,economia,economiaFinanceira}
 }
 
 const qtdHoras = function(dias,horas){
