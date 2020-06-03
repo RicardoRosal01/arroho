@@ -1,0 +1,48 @@
+<div class="card">
+    <div class="card-header" style="display: flex;justify-content: center;">
+        <h1 class="display-4">Calculo de Carga Termica e Economia</h1>
+    </div>
+    <div class="card-body mb-4">
+        <form action="/sistemas/carga" method="POST">
+            <div class="row form-group mb-4">
+                <div class="col">
+                    <input class="form-control" type="number" step="0.01" name="area" placeholder="area m²">
+                </div>
+                <div class="col">
+                    <input class="form-control" type="number" step="0.01" name="tempout"
+                        placeholder="temperatura externa">
+                </div>
+                <div class="col">
+                    <input class="form-control" type="number" step="0.01" name="tempin"
+                        placeholder="temperatura interna">
+                </div>
+            </div>
+            <div class="row form-group mb-4">
+                <div class="col">
+                    <input class="form-control" type="number" step="0.01" name="pessoas"
+                        placeholder="numero de pessoas">
+                </div>
+                <div class="col">
+                    <input class="form-control" type="number" step="0.01" name="tempo"
+                        placeholder="tempo de permanencia">
+                </div>
+            </div>
+            <div class="row form-group mb-4">
+                <div class="col">
+                    <input class="form-control" type="number" step="0.01" name="lampadas"
+                        placeholder="numero de lampadas">
+                </div>
+                <div class="col">
+                    <input class="form-control" type="number" step="0.01" name="tempoLampada"
+                        placeholder="tempo ligado">
+                </div>
+                <div class="col">
+                    <input class="form-control" type="number" step="0.01" name="potencia"
+                        placeholder="potencia">
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
+        <%- include('cargaPT-BR') %> 
+    </div>
+</div>

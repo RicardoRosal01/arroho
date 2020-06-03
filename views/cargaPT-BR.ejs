@@ -1,0 +1,22 @@
+<% if (locals.cargas) { %>
+<div class="card">
+    <div class="card-header">
+        Resultado
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="card-body">
+                <div class="card text-white bg-success mb-3">
+                    <h4 class="display-4">Carga de Iluminação: <%= cargas.cargaIluminacao %> kWh/dia </h4>
+                    <hr>
+                    <h4 class="display-4">Carga por Pessoas: <%= cargas.cargaPessoas %> kWh/dia </h4>
+                    <hr>
+                    <h4 class="display-4">Carga por Radiação: <%= cargas.cargaTransmissao %> kWh/dia </h4>
+                    <hr>
+                    <h4 class="display-4">Total: <%= cargas.total %> kWh/dia </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% } %>

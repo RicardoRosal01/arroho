@@ -5,4 +5,8 @@ Router.get('/',(req,res)=>{
     res.render('index')
 })
 
+Router.get('/carga',(req,res)=>{
+    res.render('cargaTermicaPT-BR')
+})
+
 module.exports = {Router}

@@ -6,43 +6,35 @@
     <form action="/sistemas" method="POST">
       <div class="form-group row">
         <div class="col">
-          <label class="form-label" for="vazao">Vazão (m³h)</label>
-          <input class="form-control" type="number" name="vazao">
+          <input class="form-control" type="number" name="vazao" placeholder="Vazão (m³h)">
         </div>
         <div class="col">
-          <label class="form-label" for="deltat">Delta T (°C / K)</label>
-          <input class="form-control" type="number" step="0.1" name="deltat">
+          <input class="form-control" type="number" step="0.1" name="deltat" placeholder="Delta T (°C / K)">
         </div>
         <div class="col">
-          <label class="form-label" for="diasPMes">Dias por Mês</label>
-          <input class="form-control" type="number" name="diasPMes">
+          <input class="form-control" type="number" name="diasPMes" placeholder="Dias por Mês">
         </div>
         <div class="col">
-          <label class="form-label" for="horasPDia">Horas por Dias</label>
-          <input class="form-control" type="number" name="horasPDia">
+          <input class="form-control" type="number" name="horasPDia" placeholder="Horas por Dias">
         </div>
       </div>
       <div class="form-group row">
         <div class="col">
-          <label class="form-label" for="custoKWH">custo kWh</label>
-          <input class="form-control" type="number" step="0.1" name="custoKWH">
+          <input class="form-control" type="number" step="0.1" name="custoKWH" placeholder="custo kWh">
         </div>
         <div class="col">
-          <label class="form-label" for="renovacaoDeAr">Taxa de Renovação de Ar (%)</label>
-          <input class="form-control" type="number" step="0.1" name="renovacaoDeAr">
+          <input class="form-control" type="number" step="0.1" name="renovacaoDeAr" placeholder="Taxa de Renovação de Ar (%)">
         </div>
         <div class="col">
-          <label class="form-label" for="temperaturaExterna">Temperatura Externa (°C / K)</label>
-          <input class="form-control" type="number" step="0.1" name="temperaturaExterna">
+          <input class="form-control" type="number" step="0.1" name="temperaturaExterna" placeholder="Temperatura Externa (°C / K)">
         </div>
         <div class="col">
-          <label class="form-label" for="setpoint">setpoint Comforto (°C / K)</label>
-          <input class="form-control" type="number" step="0.1" name="setpoint">
+          <input class="form-control" type="number" step="0.1" name="setpoint" placeholder="setpoint Comforto (°C / K)">
         </div>
       </div>
       <button class="btn btn-success" type="submit">Calcular</button>
     </form>
     <hr>
-    <%- include('./resultado') %> 
+    <%- include('./resultadoPT-BR') %> 
   </div>
 </div>
