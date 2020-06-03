@@ -1,12 +1,12 @@
 <div class="card">
     <div class="card-header" style="display: flex;justify-content: center;">
-        <h1 class="display-4">Calculo de Carga Termica e Economia</h1>
+        <h1 class="display-4">Cálculo de Carga Térmica y Economía</h1>
     </div>
     <div class="card-body mb-4">
         <form action="/sistemas/carga" method="POST">
             <div class="row form-group mb-4">
                 <div class="col">
-                    <input class="form-control" type="number" step="0.01" name="area" placeholder="area m²">
+                    <input class="form-control" type="number" step="0.01" name="area" placeholder="superficie m²">
                 </div>
                 <div class="col">
                     <input class="form-control" type="number" step="0.01" name="tempout"
@@ -20,29 +20,29 @@
             <div class="row form-group mb-4">
                 <div class="col">
                     <input class="form-control" type="number" step="0.01" name="pessoas"
-                        placeholder="numero de pessoas">
+                        placeholder="cantidad de personas">
                 </div>
                 <div class="col">
                     <input class="form-control" type="number" step="0.01" name="tempo"
-                        placeholder="tempo de permanencia">
+                        placeholder="duración de la estancia">
                 </div>
             </div>
             <div class="row form-group mb-4">
                 <div class="col">
                     <input class="form-control" type="number" step="0.01" name="lampadas"
-                        placeholder="numero de lampadas">
+                        placeholder="cantidad de lámparas">
                 </div>
                 <div class="col">
                     <input class="form-control" type="number" step="0.01" name="tempoLampada"
-                        placeholder="tempo ligado">
+                        placeholder="tiempo encendido (h)">
                 </div>
                 <div class="col">
                     <input class="form-control" type="number" step="0.01" name="potencia"
-                        placeholder="potencia">
+                        placeholder="potencia (kW)">
                 </div>
             </div>
-            <button class="btn btn-primary" type="submit">Enviar</button>
+            <button class="btn btn-primary" type="submit">Calcular!</button>
         </form>
-        <%- include('cargaPT-BR') %> 
+        <%- include('carga') %> 
     </div>
 </div>

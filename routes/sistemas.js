@@ -24,7 +24,7 @@ Router.post('/carga',(req,res)=>{
     cargas.cargaPessoas = _cargaPessoas
     cargas.cargaIluminacao = _cargaIluminacao
     cargas.total = total.toFixed(2)
-    res.render('cargaTermicaPT-BR',{cargas:cargas})
+    res.render('cargaTermica',{cargas:cargas})
 })
 
 module.exports = {Router}
@@ -78,5 +78,5 @@ const cargaPessoas = function(pessoas,tempo){
 }
 
 const cargaIluminacao = function(lampadas,tempo,potencia){
-    return (lampadas * tempo *potencia)/1000
+    return (lampadas * tempo *potencia*0.8)/1000
 }
