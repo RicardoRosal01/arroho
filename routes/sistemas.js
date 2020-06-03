@@ -69,7 +69,7 @@ const qtdHoras = function(dias,horas){
 }
 
 const cargaTransmissao = function(urate,area,tempout,tempin){
-    let carga = (urate * (area*2 + Math.sqrt(area)*4 *2)*(tempout-tempin)*24)/1000
+    let carga = (urate * (area*2 + Math.sqrt(area)*4 *4)*(tempout-tempin)*24)/1000
     return carga.toFixed(2)
 }
 
