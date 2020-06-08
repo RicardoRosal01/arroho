@@ -1,35 +1,45 @@
 <div class="card mb-4">
   <div style="display: flex;justify-content: center;" class="card-header">
-    <h1 class="display-4">Calculo de Economia</h1>
+    <div>
+      <h3>Calculo de Estimativa de Ahorro para Controle Johnson Controls de Manejadoras</h3>
+    </div>
   </div>
   <div class="card-body">
     <form action="/sistemas" method="POST">
       <div class="form-group row">
         <div class="col">
           <input class="form-control" type="number" name="vazao" placeholder="Flujo (m³h)">
+          <p>cantidad de la planta de agua fría. (i.e: 200 m³/h)</p>
         </div>
         <div class="col">
           <input class="form-control" type="number" step="0.1" name="deltat" placeholder="Delta T (°C / K)">
+          <p>intercambio de calor a la salida y entrada de agua fría. (i.e: 5ºC)</p>
         </div>
         <div class="col">
           <input class="form-control" type="number" name="diasPMes" placeholder="Dias al Mes">
+          <p>días por mes que las unidades de tratamiento de aire están en funcionamiento (i.e: 22 días)</p>
         </div>
         <div class="col">
           <input class="form-control" type="number" name="horasPDia" placeholder="Horas al Dia">
+          <p>horas por día que las unidades de tratamiento de aire están en funcionamiento (i.e: 22 días)</p>
         </div>
       </div>
       <div class="form-group row">
         <div class="col">
           <input class="form-control" type="number" step="0.1" name="custoKWH" placeholder="costo kWh">
+          <p>costo de kWh en su moneda local. (i.e: $ 0.50)</p>
         </div>
         <div class="col">
           <input class="form-control" type="number" step="0.1" name="renovacaoDeAr" placeholder="Tasa de renovación del aire (%)">
+          <p>cantidad de aire externo ingresa al medio ambiente en relación con el aire circulante. (i.e: 10%)</p>
         </div>
         <div class="col">
           <input class="form-control" type="number" step="0.1" name="temperaturaExterna" placeholder="Temperatura Externa (°C / K)">
+          <p>temperatura externa promedio durante un período específico. (i.e: 27 ºC)</p>
         </div>
         <div class="col">
           <input class="form-control" type="number" step="0.1" name="setpoint" placeholder="Setpoint Confort (°C / K)">
+          <p>temperatura ideal para su entorno. (i.e: 24 ºC)</p>
         </div>
       </div>
       <button class="btn btn-success" type="submit">Calcular</button>

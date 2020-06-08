@@ -1,0 +1,14 @@
+<% if (locals.mensagem) { %>
+    <h3 class="text-danger"><%= mensagem %> </h3>
+<% } %>
+<h3>Calcular Carga Termica</h3>
+<form action="/carga" method="POST">
+    <div class="row form-group">
+        <div class="col-10">
+            <input class="form-control" type="password" name="clave" placeholder="Insira la clave de Seguridad">
+        </div>
+        <div class="col-2">
+            <button class="btn btn-success form-control" type="submit">Inciar Sesión!</button>
+        </div>
+    </div>
+</form>

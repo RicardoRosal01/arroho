@@ -5,3 +5,11 @@ body {
     background-size: cover;
     -o-background-size: cover;
   }
+
+  p{
+    text-align: justify;
+  }
+
+  h3{
+    text-align: center;
+  }

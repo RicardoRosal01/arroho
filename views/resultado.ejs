@@ -1,13 +1,13 @@
 <% if (locals.dados) { %>
 <div class="card">
     <div class="card-header">
-        Resultado
+        Resultado (Calculo Estimado)
     </div>
     <div class="card-body">
         <div class="row">
             <div class="card-body">
                 <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Consumo Actual</div>
+                    <div class="card-header">Consumo sin Control</div>
                     <div class="card-body">
                         <h4 class="card-text"><%= dados.energiaAtual %> MJoules </h4>
                         <hr>
@@ -17,7 +17,7 @@
             </div>
             <div class="card-body">
                 <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Consumo Proyectado</div>
+                    <div class="card-header">Consumo con Control</div>
                     <div class="card-body">
                         <h4 class="card-text"><%= dados.energiaProjetada %> MJoules </h4>
                         <hr>
@@ -27,7 +27,7 @@
             </div>
             <div class="card-body">
                 <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <div class="card-header">estimación de ahorro</div>
+                    <div class="card-header">Estimación de ahorro</div>
                     <div class="card-body">
                         <h4 class="card-text"><%= dados.economia %> % </h4>
                         <hr>
@@ -35,6 +35,7 @@
                     </div>
                 </div>
             </div>
+            <p>Nota: Estime comparando el escenario de la unidad de tratamiento de aire sin control de temperatura y el escenario con control de temperatura utilizando los controladores Johnson Controls y sus algoritmos de control con parámetros autoajustables. la estimación se realiza mediante un cálculo aproximado, sin contar mediciones reales, considerando variables fijas y con eso puede cambiar considerablemente dependiendo de variables externas, condiciones del equipo y condiciones de operación, así como también por automatización u operación manual.</p>
         </div>
     </div>
 </div>
