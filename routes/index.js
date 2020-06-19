@@ -21,7 +21,7 @@ Router.get('/carga',(req,res)=>{
 Router.post('/carga',(req,res)=>{
     let mensagem = 'clave incorreta'
     if (req.body.clave == "XMG3-Rel.1") {
-        res.render('carga')
+        res.render('cargaTermica')
     } else {
         res.render('clave',{mensagem:mensagem})
     }
